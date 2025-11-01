@@ -12,12 +12,18 @@
     <div class="container">
       <nav>
         <div class="logo">OpenChessClub</div>
-        <div class="nav-links">
-          <a href="#features">Features</a>
-          <a href="#">Documentation</a>
-          <a href="https://github.com/openchessclub" target="_blank">GitHub</a>
-          <a href="#contact">Contact</a>
-        </div>
+          <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          
+          <div class="nav-links" id="nav-links">
+            <a href="#features">Features</a>
+            <a href="#">Documentation</a>
+            <a href="https://github.com/openchessclub" target="_blank">GitHub</a>
+            <a href="#contact">Contact</a>
+          </div>
       </nav>
     </div>
   </header>
@@ -66,6 +72,14 @@
   </footer>
   <script>
     document.getElementById('currentYear').innerHTML = `${new Date().getFullYear()}`;
+
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navLinks.classList.toggle('open');
+    });
   </script>
 </body>
 </html>
