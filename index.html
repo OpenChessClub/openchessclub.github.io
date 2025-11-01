@@ -61,8 +61,11 @@
   </main>
 
   <footer>
-    <p>© 2025 OpenChessClub.org. Open-source software for chess clubs.  
+    <p>&copy; <span id="currentYear"></span> OpenChessClub.org. Open-source software for chess clubs.
     <br><a href="https://github.com/openchessclub" target="_blank">GitHub</a></p>
   </footer>
+  <script>
+    document.getElementById('currentYear').innerHTML = `${new Date().getFullYear()}`;
+  </script>
 </body>
 </html>
